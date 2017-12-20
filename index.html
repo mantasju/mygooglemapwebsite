@@ -1,9 +1,13 @@
 <div id="map_canvas" style="width:375px; height:625px"></div>
+<style>
+	body{
+		margin: 0 !important;	
+	}
+</style>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4t-LnyUggzoSW04Z3NBlK3gdKqoWq6DQ">
     </script> 
     <script type="text/javascript">
       function initialize() {
-	document.getElementsByTagName("BODY")[0].style.border = "0 !important"
         var latlng = new google.maps.LatLng(54.725591, 25.247152);
         var myOptions = {
           zoom: 15,
