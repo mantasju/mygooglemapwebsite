@@ -1,18 +1,17 @@
-<h3>My Google Maps Demo</h3>
-    <div id="map"></div>
-    <script>
-      function initMap() {
-        var uluru = {lat: -25.363, lng: 131.044};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
+<div id="map_canvas" style="width:375px; height:625px"></div>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false">
+    </script> 
+    <script type="text/javascript">
+      function initialize() {
+        var latlng = new google.maps.LatLng(54.725591, 25.247152);
+        var myOptions = {
+          zoom: 15,
+          center: latlng,
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+		  disableDefaultUI: true
+        };
+        var map = new google.maps.Map(document.getElementById("map_canvas"),
+            myOptions);
       }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+
     </script>
